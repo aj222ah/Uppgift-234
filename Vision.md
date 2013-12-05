@@ -1,7 +1,7 @@
 # Den Glade Piraten
 
 ## Bakgrund
-Den Glade Piraten har stora problem med sin administration ocgh behöver omgående hjälp 
+Den Glade Piraten har stora problem med sin administration och behöver omgående hjälp 
 med att lösa problemen, annars riskerar båtklubben att gå i konkurs. Som det ser ut nu 
 sköts ekonomiadministrationen och administrationen gällande klubbens medlemmar och deras 
 båtar manuellt, vilket föranleder oordning, osämja och ekonomiska problem. Klubben behöver ett 
@@ -46,42 +46,21 @@ fyra barnbarn och en hund, hunden följer med husse och matte när de är ute me
 Eftersom klubben har ett stort antal medlemmar finns det också en stor spridning bland dessa 
 medlemmar, de yngsta är i 20-årsåldern och de äldsta runt 75 år.
 
-#### 20-35 år
-Även om medlemmarna i denna åldersgrupp arbetar inom olika yrken har de alla använt datorer 
-när de gick i skolan, och har därmed en viss datorvana. Cirka 98% av medlemmarna i denna 
-åldersgrupp äger en smartphone. Den övervägande delen är män, och de äger vanligtvis en båt.
+#### Medlemmar som ej äger någon båt
+Lånar båt (oftast olika versioner av jollar) av klubben. Vill kunna boka en jolle/båt 
+innan de beger sig till klubben för att försäkra sig om att de faktiskt får tillgång till 
+en när de är vid båtklubben.
 
-#### 36-50 år
-Medlemmarna i denna åldersgrupp är övervägande män (som oftast har familjen med sig) mitt i 
-karriären. De flesta jobbar mycket och har inget till övers för båtklubbens administrativa 
-strul med avgifter och båtplatser. De flesta har gymnasie- eller universitetsutbildning och 
-samtliga använder på något sätt datorer i sina jobb.
+#### Ägare av en båt
+Förväntar sig att få behålla "sin" båtplats från år till år.
 
-#### 51-65 år
-Övervägande män som äger två eller fler båtar. Förväntar sig att få sammanhängande båtplatser 
-för sina båtar oavsett hur olika båtarna är och anser att de själva troligen skulle göra ett 
-bättre jobb med att dela ut båtplatserna. Samtliga tjänar bra (eftersom de som får ekonomiska 
-problem oftast går ur klubben), och ser delvis båten som en statussymbol även om de aldrig 
-skulle erkänna det. Samtliga använder dator i sina jobb, men har inte så stor kunskap utanför 
-sitt speciella område av program. Ungefär 50% har en gymnasieutbildning, övriga har enbart 
-gått högstadiet.
-
-#### 66 år -
-Fördelningen av män och kvinnor i denna åldersgrupp är jämn, samtliga är pigga pensionärer 
-med ett stort intresse för båtar. Ingen i denna åldersgrupp använde datorer i skolan, 
-däremot har de flesta använt datorer i sitt arbete - om än med olika grader av entusiasm. 
-Ungefär 10% har dessutom funnit intresset för datorer sedan de slutade arbeta och fick mer 
-tid att sätta sig in i de fördelar datorer för med sig. Majoriteten äger en mobiltelefon, 
-men bara ett fåtal har skaffat sig en smartphone. Båtinnehavet i denna grupp är 1-2 
-båtar per medlem och strulet med båtplatser irriterar dem. De flesta vill ha samma båtplats 
-som de "alltid haft" och de anser att klubbens administratörer borde ha bättre koll på 
-vad de håller på med.
+#### Ägare av två eller fler båtar
+Övervägande män som förväntar sig att få sammanhängande båtplatser för sina båtar oavsett 
+hur olika båtarna är. Vill helst slippa lämna in fysiska papper till klubbens administratörer 
+eftersom de skulle föredra att registrera sina uppgifter själva och att uppgifter om betalning 
+och klubbavgifter sköttes automatiskt och därmed blev rätt.
 
 ## Intressenter
-
-### Användare
-Klubbens administratörer  
-Klubbens medlemmar  
 
 ### Systempersonal
 Projektgruppen  
@@ -92,10 +71,17 @@ Supportpersonal
 Nationella båtregistret (systemet kommer att utnyttja en tjänst de tillhandahåller)  
 Berörd bank (för bättre kontroll på avgiftsinbetalningarna)  
 Räddningstjänsten  
+Webbhotell  
 
 ## Liknande system
 Det finns ett antal olika administrativa system som skulle kunna underlätta för klubben, 
 men kostnad samt möjlighet att skräddarsy systemet väger in.
+
+Exempel på system:  
+[Softadmin](http://www.multisoft.se/medlemssystem?gclid=CJfZu5LtmLsCFczC3gods3AAZw) 
+erbjuder ett flexibelt medlemssystem som anpassas efter kundens behov. Erbjuder också 
+möjligheten att Multisoft (företaget som utvecklat och levererar Softadmin) tar hand 
+om driften.
 
 ## Baskrav 
 1. Möjliggöra för klubben att veta vilka medlemmar man har samt dessas båtinnehav
