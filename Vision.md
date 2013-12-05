@@ -3,8 +3,8 @@
 ## Bakgrund
 Den Glade Piraten har stora problem med sin administration ocgh behöver omgående hjälp 
 med att lösa problemen, annars riskerar båtklubben att gå i konkurs. Som det ser ut nu 
-sköts ekomomiadministrationen och administrationen gällande klubbens medlemmar och deras 
-båtar manuellt, vilket föranleder oordning och ekonomiska problem. Klubben behöver ett 
+sköts ekonomiadministrationen och administrationen gällande klubbens medlemmar och deras 
+båtar manuellt, vilket föranleder oordning, osämja och ekonomiska problem. Klubben behöver ett 
 medlemsregister som förenklar rutinuppgifter och ger klubbens kassör och sekreterare 
 kontroll över situationen.
 
@@ -16,7 +16,7 @@ samt support att använda systemet.
 ### Administratörer
 Består av klubbens kassör och klubbens sekreterare.
 
-Kassören är en man i 55-årsåldern som till vardags är inköpschef på ett mellanstort företag 
+**Kassören** är en man i 55-årsåldern som till vardags är inköpschef på ett mellanstort företag 
 i pappersproduktionsbranschen. Han läste ekonomi på gymnasiet och är teknikentusiast - han 
 vill ha den senaste tekniken men har varken tålamod att hantera, eller kunskap om hur man 
 löser, problem som uppstår; han kontaktar företagets IT-support på frekvent basis. Han 
@@ -28,7 +28,7 @@ funderat på att avbryta sitt uppdrag på grund av problemen men med en hotande 
 han inte vara den förste som överger det sjunkande skeppet. Med tanke på att han har det 
 ekonomiska ansvaret för klubben vill han få problemen lösta, men till så låg kostnad som möjligt.
 
-Sekreteraren är en man i 65-årsåldern som precis gått i pension från sitt jobb som vaktmästare/
+**Sekreteraren** är en man i 65-årsåldern som precis gått i pension från sitt jobb som vaktmästare/
 administratör på ett mindre företag. Han är försiktigt positiv till datorer och hur 
 effektivt man kan jobba med dem, men företaget han jobbade för hade en mycket begränsad budget 
 för datorer och mjukvara. Eftersom han själv hade ett något odefinierat jobb där han delvis 
@@ -50,7 +50,6 @@ medlemmar, de yngsta är i 20-årsåldern och de äldsta runt 75 år.
 Även om medlemmarna i denna åldersgrupp arbetar inom olika yrken har de alla använt datorer 
 när de gick i skolan, och har därmed en viss datorvana. Cirka 98% av medlemmarna i denna 
 åldersgrupp äger en smartphone. Den övervägande delen är män, och de äger vanligtvis en båt.
-
 
 #### 36-50 år
 Medlemmarna i denna åldersgrupp är övervägande män (som oftast har familjen med sig) mitt i 
