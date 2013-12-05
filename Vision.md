@@ -81,18 +81,18 @@ vad de håller på med.
 ## Intressenter
 
 ### Användare
-Klubbens administratörer
-Klubbens medlemmar
+Klubbens administratörer  
+Klubbens medlemmar  
 
 ### Systempersonal
-Projektgruppen
-Systemunderhållspersonal
-Supportpersonal
+Projektgruppen  
+Systemunderhållspersonal  
+Supportpersonal  
 
 ### Externa tjänster
-Nationella båtregistret (systemet kommer att utnyttja en tjänst de tillhandahåller)
-Berörd bank (för bättre kontroll på avgiftsinbetalningarna)
-Räddningstjänsten
+Nationella båtregistret (systemet kommer att utnyttja en tjänst de tillhandahåller)  
+Berörd bank (för bättre kontroll på avgiftsinbetalningarna)  
+Räddningstjänsten  
 
 ## Liknande system
 Det finns ett antal olika administrativa system som skulle kunna underlätta för klubben, 
