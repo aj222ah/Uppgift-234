@@ -43,14 +43,64 @@ jobbade. Han är gift med en kvinna som är lika båtintresserad som han, de har
 fyra barnbarn och en hund, hunden följer med husse och matte när de är ute med båten.
 
 ### Medlemmar
-Eftersom klubben har ett stort antal medlemmar finns det också en stor spridning bland dess 
+Eftersom klubben har ett stort antal medlemmar finns det också en stor spridning bland dessa 
 medlemmar, de yngsta är i 20-årsåldern och de äldsta runt 75 år.
+
+#### 20-35 år
+Även om medlemmarna i denna åldersgrupp arbetar inom olika yrken har de alla använt datorer 
+när de gick i skolan, och har därmed en viss datorvana. Cirka 98% av medlemmarna i denna 
+åldersgrupp äger en smartphone. Den övervägande delen är män, och de äger vanligtvis en båt.
+
+
+#### 36-50 år
+Medlemmarna i denna åldersgrupp är övervägande män (som oftast har familjen med sig) mitt i 
+karriären. De flesta jobbar mycket och har inget till övers för båtklubbens administrativa 
+strul med avgifter och båtplatser. De flesta har gymnasie- eller universitetsutbildning och 
+samtliga använder på något sätt datorer i sina jobb.
+
+#### 51-65 år
+Övervägande män som äger två eller fler båtar. Förväntar sig att få sammanhängande båtplatser 
+för sina båtar oavsett hur olika båtarna är och anser att de själva troligen skulle göra ett 
+bättre jobb med att dela ut båtplatserna. Samtliga tjänar bra (eftersom de som får ekonomiska 
+problem oftast går ur klubben), och ser delvis båten som en statussymbol även om de aldrig 
+skulle erkänna det. Samtliga använder dator i sina jobb, men har inte så stor kunskap utanför 
+sitt speciella område av program. Ungefär 50% har en gymnasieutbildning, övriga har enbart 
+gått högstadiet.
+
+#### 66 år -
+Fördelningen av män och kvinnor i denna åldersgrupp är jämn, samtliga är pigga pensionärer 
+med ett stort intresse för båtar. Ingen i denna åldersgrupp använde datorer i skolan, 
+däremot har de flesta använt datorer i sitt arbete - om än med olika grader av entusiasm. 
+Ungefär 10% har dessutom funnit intresset för datorer sedan de slutade arbeta och fick mer 
+tid att sätta sig in i de fördelar datorer för med sig. Majoriteten äger en mobiltelefon, 
+men bara ett fåtal har skaffat sig en smartphone. Båtinnehavet i denna grupp är 1-2 
+båtar per medlem och strulet med båtplatser irriterar dem. De flesta vill ha samma båtplats 
+som de "alltid haft" och de anser att klubbens administratörer borde ha bättre koll på 
+vad de håller på med.
 
 ## Intressenter
 
+### Användare
+Klubbens administratörer
+Klubbens medlemmar
+
+### Systempersonal
+Projektgruppen
+Systemunderhållspersonal
+Supportpersonal
+
+### Externa tjänster
+Nationella båtregistret (systemet kommer att utnyttja en tjänst de tillhandahåller)
+Berörd bank (för bättre kontroll på avgiftsinbetalningarna)
+Räddningstjänsten
 
 ## Liknande system
-
+Det finns ett antal olika administrativa system som skulle kunna underlätta för klubben, 
+men kostnad samt möjlighet att skräddarsy systemet väger in.
 
 ## Baskrav 
-
+1. Möjliggöra för klubben att veta vilka medlemmar man har samt dessas båtinnehav
+2. Ge överblick över klubbavgifterna
+3. Förenkla hanteringen av båtplatser
+4. Förenkla administrationen av medlemsuppgifter
+5. Kunna tillhandahålla korrekta uppgifter då myndigheter efterfrågar dem
