@@ -43,8 +43,6 @@ jobbade. Han är gift med en kvinna som är lika båtintresserad som han, de har
 fyra barnbarn och en hund, hunden följer med husse och matte när de är ute med båten.
 
 ### Medlemmar
-Eftersom klubben har ett stort antal medlemmar finns det också en stor spridning bland dessa 
-medlemmar, de yngsta är i 20-årsåldern och de äldsta runt 75 år.
 
 #### Medlemmar som ej äger någon båt
 Lånar båt (oftast olika versioner av jollar) av klubben. Vill kunna boka en jolle/båt 
