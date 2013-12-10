@@ -45,7 +45,7 @@ fyra barnbarn och en hund, hunden följer med husse och matte när de är ute me
 ### Medlemmar
 Gemensamt för samtliga medlemmar är att de vill slippa lämna in fysiska papper till klubbens administratörer 
 för att istället registrera och uppdatera sina uppgifter själva. Dessutom vill de att uppgifter om betalning 
-och klubbavgifter sköttes automatiskt och därmed blev rätt.
+och klubbavgifter sköts automatiskt och därmed blir rätt.
 
 #### Medlemmar som ej äger någon båt
 Lånar båt (oftast olika versioner av jollar) av klubben. Vill kunna boka en jolle/båt 
