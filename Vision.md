@@ -43,6 +43,9 @@ jobbade. Han är gift med en kvinna som är lika båtintresserad som han, de har
 fyra barnbarn och en hund, hunden följer med husse och matte när de är ute med båten.
 
 ### Medlemmar
+Gemensamt för samtliga medlemmar är att de vill slippa lämna in fysiska papper till klubbens administratörer 
+för att istället registrera och uppdatera sina uppgifter själva. Dessutom vill de att uppgifter om betalning 
+och klubbavgifter sköttes automatiskt och därmed blev rätt.
 
 #### Medlemmar som ej äger någon båt
 Lånar båt (oftast olika versioner av jollar) av klubben. Vill kunna boka en jolle/båt 
@@ -54,9 +57,7 @@ Förväntar sig att få behålla "sin" båtplats från år till år.
 
 #### Ägare av två eller fler båtar
 Övervägande män som förväntar sig att få sammanhängande båtplatser för sina båtar oavsett 
-hur olika båtarna är. Vill helst slippa lämna in fysiska papper till klubbens administratörer 
-eftersom de skulle föredra att registrera sina uppgifter själva och att uppgifter om betalning 
-och klubbavgifter sköttes automatiskt och därmed blev rätt.
+hur olika båtarna är. 
 
 ## Intressenter
 
@@ -79,7 +80,11 @@ Exempel på system:
 [Softadmin](http://www.multisoft.se/medlemssystem?gclid=CJfZu5LtmLsCFczC3gods3AAZw) 
 erbjuder ett flexibelt medlemssystem som anpassas efter kundens behov. Erbjuder också 
 möjligheten att Multisoft (företaget som utvecklat och levererar Softadmin) tar hand 
-om driften.
+om driften.  
+
+[Visma Förening](http://www.vismaspcs.se/produkter/bokforingsprogram/visma-forening) 
+erbjuder ett bokförings- och ekonomisystem som även täcker in medlemsregister. Erbjuder 
+även utbildning i programmet.
 
 ## Baskrav 
 1. Möjliggöra för klubben att veta vilka medlemmar man har samt dessas båtinnehav
@@ -87,3 +92,5 @@ om driften.
 3. Förenkla hanteringen av båtplatser
 4. Förenkla administrationen av medlemsuppgifter
 5. Kunna tillhandahålla korrekta uppgifter då myndigheter efterfrågar dem
+6. Erbjuda bokningsmöjligheter för av klubben tillhandahållen utrustning
+7. Möjliggöra för medlemmarna att anmäla sig till event och tävlingar
