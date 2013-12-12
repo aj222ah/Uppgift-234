@@ -29,7 +29,7 @@ Förväntar sig att få korrekta uppgifter om båtarnas kajplatser vid behov
 ## Identifierade användningsfall
 Uppdatera medlemsuppgifter  
 Uppdatera båtinnehav  
-Generera fakturor  
+Generera faktura  
 Stämma av inbetalningar  
 Fördela båtplatser  
 Boka utrustning  
@@ -43,8 +43,8 @@ Medlemmen loggar in och väljer vilken/vilka uppgift(er) hen vill uppdatera. Med
 ### Uppdatera båtinnehav
 Medlemmen loggar in och väljer att uppdatera båtinnehav. Systemet presenterar alternativen uppdatera befintlig båt eller registrera ny båt. Medlemmen väljer och skriver in uppgifterna. Systemet kontaktar nationella båtregistret för att komplettera uppgifter om ägare samt detaljer om båten. Nationella båtregistret överför uppgifterna till systemet. Systemet presenterar uppgifterna för medlemmen. Medlemmen sparar uppgifterna. Systemet bekräftar att uppgifterna sparats.
 
-### Generera fakturor
-Kassören initierar fakturagenerering. Systemet presenterar en lista över medlemmar och deras totalbelopp för medlemsavgiften. Kassören väljer att skriva ut fakturor. Systemet skriver ut fakturor
+### Generera faktura
+Kassören initierar fakturagenerering. Systemet presenterar en lista över medlemmar och deras totalbelopp för medlemsavgiften. Kassören väljer att skriva ut fakturor. Systemet skriver ut fakturor.
 
 ### Fördela båtplatser
 Sekreteraren är inloggad i systemet som administratör och väljer att se förra säsongens båtplatser. Systemet presenterar listan. Sekreteraren väljer att i möjligaste mån låta medlemmarna behålla sina platser från förra året. Systemet bekräftar de sparade platserna och presenterar en lista över resterande båtar och tillgängliga kajplatser. Sekreteraren kan nu välja att antingen få förslag på hur båtplatserna ska fördelas från systemet eller göra sammankopplingen själv. När samtliga båtar fått en plats sparar sekreteraren uppgifterna. Systemet bekräftar att uppgifterna sparats.
@@ -58,23 +58,27 @@ Medlemmen är inloggad i systemet och systemet presenterar en lista över utrust
 Förfallodatumet för betalning av medlemsavgiften har passerats. Kassören är inloggad i systemet som kassör.
 
 #### Huvudscenario
-1. Banken överför uppgifter om inkomna betalningar till systemet
-2. Kassören väljer att se betalningar
-3. Systemet presenterar en lista över vilka medlemmar som betalat samt vilket belopp de betalat
-4. Kassören initierar avstämning mellan inbetalat belopp och fakturerat belopp per medlem
-5. Systemet presenterar lista med eventuella avvikelser markerade
-6. Kassören konstaterar att inga avvikelser finns och avslutar funktionen
+1. Kassören väljer att stämma av inbetalningar
+2. Systemet kontaktar banken och efterfrågar uppgifter om inbetalningar
+3. Banken överför uppgifter om inkomna betalningar till systemet
+4. Systemet presenterar en lista över vilka medlemmar som betalat samt vilket belopp de betalat
+5. Kassören initierar avstämning mellan inbetalat belopp och fakturerat belopp per medlem
+6. Systemet presenterar lista med eventuella avvikelser markerade
+7. Kassören konstaterar att inga avvikelser finns och avslutar funktionen
 
 #### Alternativ
-**6a. Det finns avvikelser där någon medlem inte betalat eller betalat för lite**  
- 1. Kassören markerar berörda fakturor  
- 2. Systemet genererar lista över medlemmar samt totalbelopp för medlemsavgiften samt förseningsavgift  
- 3. Åter till användningsfallet 'Generera fakturor'  
+**2a. Systemet får ingen kontakt med banken**  
+1. Systemet meddelar kassören att det inte får kontakt med banken
+
+**7a. Det finns avvikelser där någon medlem inte betalat eller betalat för lite**  
+1. Kassören markerar berörda fakturor  
+2. Systemet genererar lista över medlemmar samt totalbelopp för medlemsavgiften samt förseningsavgift  
+3. Åter till användningsfallet 'Generera fakturor'  
   
-**6b. Det finns avvikelser där någon medlem betalat för mycket**  
- 1. Kassören markerar berörda fakturor  
- 2. Systemet visar berörd faktura med medlemsuppgifter  
- 3. Kassören initierar utskrift av notifikation till berörd medlem  
- 4. Systemet skriver ut notifikation  
- 5. Kassören initierar återbetalning  
- 6. Systemet kontaktar banken med uppgifterna  
+**7b. Det finns avvikelser där någon medlem betalat för mycket**  
+1. Kassören markerar berörda fakturor  
+2. Systemet visar berörd faktura med medlemsuppgifter  
+3. Kassören initierar utskrift av notifikation till berörd medlem  
+4. Systemet skriver ut notifikation  
+5. Kassören initierar återbetalning  
+6. Systemet kontaktar banken med uppgifterna  
