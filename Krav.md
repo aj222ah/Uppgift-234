@@ -27,10 +27,10 @@ Hanterar medlemmarnas betalning av medlemsavgiften och tillhandahåller informat
 Förväntar sig att få korrekta uppgifter om båtarnas kajplatser vid behov
 
 ## Identifierade användningsfall
-Uppdatera medlemsuppgifter
+Uppdatera medlemsuppgifter  
 Uppdatera båtinnehav  
 Generera fakturor  
-Stämma av betalningar  
+Stämma av inbetalningar  
 Fördela båtplatser  
 Boka utrustning  
 
@@ -51,7 +51,7 @@ Sekreteraren är inloggad i systemet som administratör och väljer att se förr
 Medlemmen är inloggad i systemet och systemet presenterar en lista över utrustning. Medlemmen väljer tidpunkt som han vill boka utrustning för och systemet visar utrustning som är bokningsbar vid det angivna tillfället. Medlemmen väljer utrustning och sparar sin bokning. Systemet bekräftar bokningen.
 
 ## Användningsfall - fully dressed
-### Stämma av betalningar
+### Stämma av inbetalningar
 #### Förkrav
 Förfallodatumet för betalning av medlemsavgiften har passerats. Kassören är inloggad i systemet som kassör.
 
@@ -63,12 +63,12 @@ Förfallodatumet för betalning av medlemsavgiften har passerats. Kassören är 
 5. Systemet presenterar lista med eventuella avvikelser markerade
 6. Kassören konstaterar att inga avvikelser finns och avslutar funktionen
 
-10a. Det finns avvikelser där någon medlem inte betalat eller betalat för lite  
+6a. Det finns avvikelser där någon medlem inte betalat eller betalat för lite  
 1. Kassören markerar berörda fakturor  
 2. Systemet genererar lista över medlemmar samt totalbelopp för medlemsavgiften samt förseningsavgift  
 3. Åter till användningsfallet 'Generera fakturor'  
   
-10b. det finns avvikelser där någon medlem betalat för mycket  
+6b. Det finns avvikelser där någon medlem betalat för mycket  
 1. Kassören markerar berörda fakturor  
 2. Systemet visar berörd faktura med medlemsuppgifter  
 3. Kassören initierar utskrift av notifikation till berörd medlem  
