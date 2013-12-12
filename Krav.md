@@ -64,14 +64,14 @@ Förfallodatumet för betalning av medlemsavgiften har passerats. Kassören är 
 6. Kassören konstaterar att inga avvikelser finns och avslutar funktionen
 
 6a. Det finns avvikelser där någon medlem inte betalat eller betalat för lite  
-1. Kassören markerar berörda fakturor  
-2. Systemet genererar lista över medlemmar samt totalbelopp för medlemsavgiften samt förseningsavgift  
-3. Åter till användningsfallet 'Generera fakturor'  
+ 1. Kassören markerar berörda fakturor  
+ 2. Systemet genererar lista över medlemmar samt totalbelopp för medlemsavgiften samt förseningsavgift  
+ 3. Åter till användningsfallet 'Generera fakturor'  
   
 6b. Det finns avvikelser där någon medlem betalat för mycket  
-1. Kassören markerar berörda fakturor  
-2. Systemet visar berörd faktura med medlemsuppgifter  
-3. Kassören initierar utskrift av notifikation till berörd medlem  
-4. Systemet skriver ut notifikation  
-5. Kassören initierar återbetalning  
-6. Systemet kontaktar banken med uppgifterna  
+ 1. Kassören markerar berörda fakturor  
+ 2. Systemet visar berörd faktura med medlemsuppgifter  
+ 3. Kassören initierar utskrift av notifikation till berörd medlem  
+ 4. Systemet skriver ut notifikation  
+ 5. Kassören initierar återbetalning  
+ 6. Systemet kontaktar banken med uppgifterna  
