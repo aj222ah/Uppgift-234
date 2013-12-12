@@ -34,6 +34,8 @@ Stämma av inbetalningar
 Fördela båtplatser  
 Boka utrustning  
 
+[Diagram finns här](https://c9.io/aj222ah/uppgift234/workspace/Use case lab 3.pdf)
+
 ## Användningsfall - kort format
 ### Uppdatera medlemsuppgifter
 Medlemmen loggar in och väljer vilken/vilka uppgift(er) hen vill uppdatera. Medlemmen anger sin nya information och sparar. Systemet bekräftar att uppgifter sparats.
