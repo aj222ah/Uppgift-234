@@ -65,6 +65,7 @@ Förfallodatumet för betalning av medlemsavgiften har passerats. Kassören är 
 5. Systemet presenterar lista med eventuella avvikelser markerade
 6. Kassören konstaterar att inga avvikelser finns och avslutar funktionen
 
+#### Alternativ
 6a. Det finns avvikelser där någon medlem inte betalat eller betalat för lite  
  1. Kassören markerar berörda fakturor  
  2. Systemet genererar lista över medlemmar samt totalbelopp för medlemsavgiften samt förseningsavgift  
