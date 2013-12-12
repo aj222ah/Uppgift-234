@@ -43,11 +43,11 @@ Medlemmen loggar in och väljer vilken/vilka uppgift(er) hen vill uppdatera. Med
 ### Uppdatera båtinnehav
 Medlemmen loggar in och väljer att uppdatera båtinnehav. Systemet presenterar alternativen uppdatera befintlig båt eller registrera ny båt. Medlemmen väljer och skriver in uppgifterna. Systemet kontaktar nationella båtregistret för att komplettera uppgifter om ägare samt detaljer om båten. Nationella båtregistret överför uppgifterna till systemet. Systemet presenterar uppgifterna för medlemmen. Medlemmen sparar uppgifterna. Systemet bekräftar att uppgifterna sparats.
 
-### Gererera fakturor
+### Generera fakturor
 Kassören initierar fakturagenerering. Systemet presenterar en lista över medlemmar och deras totalbelopp för medlemsavgiften. Kassören väljer att skriva ut fakturor. Systemet skriver ut fakturor
 
 ### Fördela båtplatser
-Sekreteraren är inloggad i systemet som administratör och väljer att se förra säsongens båtplatser. Systemet presenterar listan. Sekreteraren väljer att i möjligaste mån läta medlemmarna behålla sina platser från förra året. Systemet bekräftar de sparade platserna och presenterar en lista över resterande båtar och tillgängliga kajplatser. Sekreteraren kan nu välja att antingen få förslag på hur båtplatserna ska fördelas från systemet eller göra sammankopplingen själv. När samtliga båtar fått en plats sparar sekreteraren uppgifterna. Systemet bekräftar att uppgifterna sparats.
+Sekreteraren är inloggad i systemet som administratör och väljer att se förra säsongens båtplatser. Systemet presenterar listan. Sekreteraren väljer att i möjligaste mån låta medlemmarna behålla sina platser från förra året. Systemet bekräftar de sparade platserna och presenterar en lista över resterande båtar och tillgängliga kajplatser. Sekreteraren kan nu välja att antingen få förslag på hur båtplatserna ska fördelas från systemet eller göra sammankopplingen själv. När samtliga båtar fått en plats sparar sekreteraren uppgifterna. Systemet bekräftar att uppgifterna sparats.
 
 ### Boka utrustning
 Medlemmen är inloggad i systemet och systemet presenterar en lista över utrustning. Medlemmen väljer tidpunkt som han vill boka utrustning för och systemet visar utrustning som är bokningsbar vid det angivna tillfället. Medlemmen väljer utrustning och sparar sin bokning. Systemet bekräftar bokningen.
