@@ -61,25 +61,25 @@ Det är dags att fakturera medlemsavgifterna. Kassören är inloggad i systemet 
 11. Kassören konstaterar att inga avvikelser finns och avslutar funktionen
 
 #### Alternativ
-2a. Systemet indikerar ett problem med beräkning av något fakturabelopp
-1. Kassören väljer att granska den berörda fakturan
-2. Systemet visar fakturan med problemet markerat
-3. Kassören anger uppgifterna manuellt
-4. Åter till punkt 4 i huvudscenariot
-
-10a. Det finns avvikelser där någon medlem inte betalat eller betalat för lite
-1. Kassören markerar berörda fakturor
-2. Systemet genererar lista över medlemmar samt totalbelopp för medlemsavgiften samt förseningsavgift
-3. Åter till punkt 3 i huvudscenariot
-
-10b. det finns avvikelser där någon medlem betalat för mycket
-1. Kassören markerar berörda fakturor
-2. Systemet visar berörd faktura med medlemsuppgifter
-3. Kassören initierar utskrift av notifikation till berörd medlem
-4. Systemet skriver ut notifikation
-5. Kassören initierar återbetalning
-6. Systemet kontaktar banken med uppgifterna
-7. Medlemmen får sin återbetalning från banken
-8. Banken bekräftar till systemet att återbetalning skett
-9. Systemet korrigerar sina uppgifter
-10. Åter till punkt 7 i huvudscenariot
+2a. Systemet indikerar ett problem med beräkning av något fakturabelopp  
+1. Kassören väljer att granska den berörda fakturan  
+2. Systemet visar fakturan med problemet markerat  
+3. Kassören anger uppgifterna manuellt  
+4. Åter till punkt 4 i huvudscenariot  
+  
+10a. Det finns avvikelser där någon medlem inte betalat eller betalat för lite  
+1. Kassören markerar berörda fakturor  
+2. Systemet genererar lista över medlemmar samt totalbelopp för medlemsavgiften samt förseningsavgift  
+3. Åter till punkt 3 i huvudscenariot  
+  
+10b. det finns avvikelser där någon medlem betalat för mycket  
+1. Kassören markerar berörda fakturor  
+2. Systemet visar berörd faktura med medlemsuppgifter  
+3. Kassören initierar utskrift av notifikation till berörd medlem  
+4. Systemet skriver ut notifikation  
+5. Kassören initierar återbetalning  
+6. Systemet kontaktar banken med uppgifterna  
+7. Medlemmen får sin återbetalning från banken  
+8. Banken bekräftar till systemet att återbetalning skett  
+9. Systemet korrigerar sina uppgifter  
+10. Åter till punkt 7 i huvudscenariot  
