@@ -93,9 +93,10 @@ Samtliga användningsfall kräver att användaren är uppkopplad mot testdatabas
 |4.1     |345,00             |0,00                  |a. (medlem 111111)         |Uppkopplad                  |
 |4.2     |345,00             |-204,00               |a. (medlem 222222)         |Uppkopplad                  |
 |4.3     |345,00             |192,55                |a. (medlem 333333)         |Uppkopplad                  |
-|4.4     |belopp i SEK       |avvikande inbetalning |b. (medlem finns ej)       |Uppkopplad                  |
+|4.4     |belopp i SEK       |Avvikande inbetalning |b. (medlem finns ej)       |Uppkopplad                  |
 |6.1     |Initiering funktion|Lista över betalningar|4.1 / 4.2 / 4.3 / 4.4      |Uppkoppling behövs ej       |
 |7.1     |-204,00            |270,32                |4.2                        |Uppkoppling behövs ej       |
+|7.2     |Initiering funktion|Funktion avslutad     |4.3 och 2.1                |Uppkopplad                  |
 
 #### TF 1.1 Huvudscenario: funktion avstämning inbetalningar
 1. Kassören väljer att stämma av inbetalningar
@@ -156,11 +157,7 @@ Samtliga användningsfall kräver att användaren är uppkopplad mot testdatabas
 3. Systemet beräknar förseningsavgift (204,00 * 0,08 = 16,32 + 50 = 66,32 SEK)
 4. Systemet uppdaterar betalningssaldo (204,00 + 66,32 = 270,32) 
 
-#### TF 1.1 Huvudscenario: funktion återbetalning
-1. Kassören väljer att återbetala belopp på faktura
-2. Systemfunktionen för återbetalning initieras
-
-### TF 7.3 Scenario 7b: återbetalning
+### TF 7.2 Scenario 7b: återbetalning
 1. Testfall 4.3 är genomfört
 2. Testfall 2.1 är genomfört
 3. Systemet kontaktar banken (se separat testfall) med uppgifterna
