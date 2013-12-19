@@ -21,7 +21,8 @@ Förfallodatumet för betalning av medlemsavgiften har passerats. Kassören är 
 **7a. Det finns avvikelser där någon medlem inte betalat eller betalat för lite**  
  1. Kassören markerar berörda fakturor  
  2. Systemet genererar lista över medlemmar samt totalbelopp för medlemsavgiften samt förseningsavgift  
- 3. Åter till användningsfallet 'Generera fakturor'  
+ 3. Kassören godkänner det nya beloppet  
+ 4. Åter till användningsfallet 'Generera fakturor'  
   
 **7b. Det finns avvikelser där någon medlem betalat för mycket**  
  1. Kassören markerar berörda fakturor  
@@ -68,18 +69,18 @@ Förfallodatumet för betalning av medlemsavgiften har passerats. Kassören är 
 
 ### TF 4.3 Huvudscenario: systemet presenterar en lista över inkomna betalningar
 1. Systemet kopplar indata från banken till medlem
-2. Systemet formatterar informationen till en lista
+2. Systemet formaterar informationen till en lista
 3. Systemet visar listan
 
 ### TF 4.4 TF 4.1 Huvudscenario: systemet presenterar en lista över inkomna betalningar - felaktigt medlemsnummer
 1. Systemet kopplar indata från banken till medlem
 2. Systemet särbehandlar uppgifterna som inte kan matchas med en medlem
-3. Systemet formatterar informationen till en lista  med omatchade inbetalningar överst
+3. Systemet formaterar informationen till en lista med omatchade inbetalningar överst
 4. Systemet visar listan
 
 ### TF 5.1 Huvudscenario: funktion avstämning belopp
 1. Kassören väljer att stämma av inbetalat belopp mot förväntat belopp
-2. Systemfunktionen för beloppavstämning initieras
+2. Systemfunktionen för beloppsavstämning initieras
 
 ### TF 5.2 Huvudscenario: beloppsavstämning - korrekta belopp
 1. Systemet söker upp medlemmens betalningssaldo via medlemsnumret
@@ -101,5 +102,20 @@ Förfallodatumet för betalning av medlemsavgiften har passerats. Kassören är 
 
 ### TF 6.1 Huvudscenario: funktion presentera beloppsavstämning
 1. Systemet sorterar resultaten från beloppsavstämningen
-2. Systemet formatterar de sorterade resultatet som en lista 
+2. Systemet formaterar de sorterade resultatet som en lista 
 
+### TF 7.1 Scenario 7a: lägg på förseningsavgift
+1. Systemet letar upp medlemmens betalningssaldo
+2. Systemet beräknar förseningsavgift
+3. Systemet presenterar betalningssaldot samt beräknad förseningsavgift
+4. Systemet mottar godkännande från kassör
+5. Systemet uppdaterar betalningssaldo
+
+### TF 7.2 Scenario 7b: presentera medlemsfaktura
+1. Kassör väljer vilken medlemsfaktura hen vill se
+2. Systemet letar upp fakturan och visar den
+
+### TF 7.3 Scenario 7b: funktion initiera återbetalning
+1. Kassör initierar funktionen
+2. Systemet letar upp medlemsinformation och betalningssaldo
+3. Systemet kontaktar banken (se separat testfall) med uppgifterna
