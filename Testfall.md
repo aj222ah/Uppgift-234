@@ -32,12 +32,20 @@
  6. Systemet kontaktar banken med uppgifterna  
 
 ## Förkrav
+Samtliga användningsfall kräver att användaren är uppkopplad mot testdatabasen  
+
 ### Medlemsinformation i testdatabas
-| Medlemsnummer | Medlem - namn      | Inledande betalningssaldo | 
-|:------------: |--------------------|:-------------------------:|
-|111111         |Kalle Karlsson      |- 345,00 SEK               |
-|222222         |Anders Andersson    |- 549,00 SEK               |
-|333333         |Sven Svensson       |- 152,45 SEK               |
+|Medlemsnummer|Medlem - namn    |Inledande betalningssaldo| 
+|:-----------:|-----------------|------------------------:|
+|111111       |Kalle Karlsson   |- 345,00 SEK             |
+|222222       |Anders Andersson |- 549,00 SEK             |
+|333333       |Sven Svensson    |- 152,45 SEK             |
+
+|Fakturanummer|Medlemsnummer|Fakturadatum|Förfallodag|Fakturabelopp| 
+|-------------|-------------|------------|-----------|------------:|
+|1352610      |111111       |2013-11-10  |2013-11-30 |- 345,00 SEK |
+|1352740      |222222       |2013-11-10  |2013-11-30 |- 549,00 SEK |
+|1352605      |333333       |2013-11-10  |2013-11-30 |- 152,45 SEK |
 
 ### Övrig information om testdatabas
 * Förseningsavgiften är 50 SEK + 8% av utestående betalning  
@@ -49,11 +57,13 @@
 |testa123    |admin987    |
 
 ## Testfall
-### Grundläggande testfall
-|Testfall|Input |Förväntad output|Förkrav:|Genomfört testfall|Uppkopplad mot testdatabas|Testversion av BankAPI|
-|--------|------|----------------|--------|:----------------:|:------------------------:|:--------------------:|
-|a       |111111|Kalle Karlsson  |        |-                 |Ja                        |N/A                   |
-|b       |123456|Medlem finns ej |        |-                 |Ja                        |N/A                   |
+### Grundläggande testfall (allmän användning - ej specifikt detta användningsfall)
+|Testfall|Input               |Förväntad output|Förkrav: Genomfört testfall|Förkrav: Testversion av BankAPI|
+|--------|--------------------|----------------|:-------------------------:|:-----------------------------:|
+|a       |111111              |Kalle Karlsson  |-                          |Uppkoppling behövs ej          |
+|b       |123456              |Medlem finns ej |-                          |Uppkoppling behövs ej          |
+|c       |1352740             |Faktura hittad  |-                          |Uppkoppling behövs ej          |
+|d       |Initiering funktion |Visning faktura |-                          |Uppkoppling behövs ej          |
 
 #### TF a. Söka medlem - medlem finns
 1. Indata: medlemsnummer 111111
@@ -65,20 +75,27 @@
 2. Systemet söker efter numret i databasen
 3. Ingen medlem hittas
 
+#### TF c. Söka faktura - faktura finns
+1. Indata: fakturanummer 1352740
+2. Systemet letar upp fakturan
+
+#### TF d. Visa faktura
+1. Användare initierar visning
+2. Systemet visar fakturan
 
 ### Testfall knutna till användningfallsscenariot
-|Testfall|Input              |Förväntad output      |Förkrav:|Genomfört testfall     |Uppkopplad mot testdatabas|Testversion av BankAPI|
-|--------|-------------------|----------------------|--------|:---------------------:|:------------------------:|:--------------------:|
-|1.1     |Initiering funktion|Funktion startar      |        |-                      |Ja                        |N/A                   |
-|2.1     |testa123, admin987 |Inloggning ok         |        |-                      |Ja                        |Uppkopplad            |
-|2.2     |321atset, 789nimda |Inloggning misslyckas |        |-                      |Ja                        |Uppkopplad            |
-|2.3     |                   |Bank ej tillgänglig   |        |-                      |Ja                        |Nedkopplad            |
-|4.1     |345,00             |0,00                  |        |a. (medlem 111111)     |Ja                        |Uppkopplad            |
-|4.2     |345,00             |-204,00               |        |a. (medlem 222222)     |Ja                        |Uppkopplad            |
-|4.3     |345,00             |192,55                |        |a. (medlem 333333)     |Ja                        |Uppkopplad            |
-|4.4     |belopp i SEK       |avvikande inbetalning |        |b. (medlem finns ej)   |Ja                        |Uppkopplad            |
-|6.1     |Initiering funktion|Lista över betalningar|        |4.1 / 4.2 / 4.3 / 4.4  |Ja                        |N/A                   |
-|7.1     |-204,00            |270,32                |        |4.2                    |Ja                        |N/A                   |
+|Testfall|Input              |Förväntad output      |Förkrav: Genomfört testfall|Förkrav: Testversion BankAPI|
+|--------|-------------------|----------------------|:-------------------------:|:--------------------------:|
+|1.1     |Initiering funktion|Funktion startar      |-                          |Uppkoppling behövs ej       |
+|2.1     |testa123, admin987 |Inloggning ok         |-                          |Uppkopplad                  |
+|2.2     |321atset, 789nimda |Inloggning misslyckas |-                          |Uppkopplad                  |
+|2.3     |                   |Bank ej tillgänglig   |-                          |Nedkopplad                  |
+|4.1     |345,00             |0,00                  |a. (medlem 111111)         |Uppkopplad                  |
+|4.2     |345,00             |-204,00               |a. (medlem 222222)         |Uppkopplad                  |
+|4.3     |345,00             |192,55                |a. (medlem 333333)         |Uppkopplad                  |
+|4.4     |belopp i SEK       |avvikande inbetalning |b. (medlem finns ej)       |Uppkopplad                  |
+|6.1     |Initiering funktion|Lista över betalningar|4.1 / 4.2 / 4.3 / 4.4      |Uppkoppling behövs ej       |
+|7.1     |-204,00            |270,32                |4.2                        |Uppkoppling behövs ej       |
 
 #### TF 1.1 Huvudscenario: funktion avstämning inbetalningar
 1. Kassören väljer att stämma av inbetalningar
@@ -139,11 +156,11 @@
 3. Systemet beräknar förseningsavgift (204,00 * 0,08 = 16,32 + 50 = 66,32 SEK)
 4. Systemet uppdaterar betalningssaldo (204,00 + 66,32 = 270,32) 
 
-### TF 7.2 Scenario 7b: presentera medlemsfaktura
-1. Kassör väljer vilken medlemsfaktura hen vill se
-2. Systemet letar upp fakturan och visar den
+#### TF 1.1 Huvudscenario: funktion återbetalning
+1. Kassören väljer att återbetala belopp på faktura
+2. Systemfunktionen för återbetalning initieras
 
-### TF 7.3 Scenario 7b: funktion initiera återbetalning
-1. Kassör initierar funktionen
-2. Systemet letar upp medlemsinformation och betalningssaldo
+### TF 7.3 Scenario 7b: återbetalning
+1. Testfall 4.3 är genomfört
+2. Testfall 2.1 är genomfört
 3. Systemet kontaktar banken (se separat testfall) med uppgifterna
