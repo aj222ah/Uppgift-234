@@ -16,19 +16,19 @@
 
 ### Medlemsinformation i testdatabas
 | Medlemsnummer | Medlem - namn              | Inledande betalningssaldo | 
-|:------------: |:--------------------------:|:-------------------------:|
+|:------------: |----------------------------|:-------------------------:|
 |111111         |Kalle Karlsson              |- 549,00 SEK               |
 |222222         |Anders Andersson            |+ 152,45 SEK               |
 |333333         |Sven Svensson               |0,00 SEK                   |
 
 ### Övrig information om testdatabas
-Förseningsavgiften är 50 SEK + 8% av utestående betalning  
-Skrivaren är inkopplad och på
+* Förseningsavgiften är 50 SEK + 8% av utestående betalning  
+* Skrivaren är inkopplad, installerad och påslagen
 
-|Inloggningsuppgifter testversion BankAPI|
-|----------------------------------------|
-|Login:           |Lösenord:             |
-|testa123         |admin987              |
+#### Inloggningsuppgifter till testversion BankAPI
+|Login:      |Lösenord:   |
+|------------|------------|
+|testa123    |admin987    |
 
 ## Testfall
 ### TF 1.1 Huvudscenario: funktion avstämning inbetalningar
@@ -38,13 +38,13 @@ Skrivaren är inkopplad och på
 ### TF 2.1 Huvudscenario: systemet kontaktar banken
 1. Systemet försöker kontakta banken
 2. Banken svarar på kontaktförsöket
-3. Systemet anger sina "inloggningsuppgifter"
+3. Systemet anger sina inloggningsuppgifter
 4. Banken verifierar inloggningen
 
 ### TF 2.2 Huvudscenario: systemet kontaktar banken med felaktig inloggning
 1. Systemet försöker kontakta banken
 2. Banken svarar på kontaktförsöket
-3. Systemet anger felaktiga "inloggningsuppgifter"
+3. Systemet anger felaktiga inloggningsuppgifter
 4. Banken avvisar inloggningen
 5. Systemet meddelar användaren om problemet
 
