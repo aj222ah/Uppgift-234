@@ -1,25 +1,43 @@
 # Den Glade Piraten - Testfall
+## Användningsfall
+### Stämma av inbetalningar
+#### Huvudscenario
+1. Kassören väljer att stämma av inbetalningar
+2. Systemet kontaktar banken och efterfrågar uppgifter om inbetalningar
+3. Banken överför uppgifter om inkomna betalningar till systemet
+4. Systemet beräknar nytt saldo för respektive medlem
+5. Kassören väljer att se listning av betalningar
+6. Systemet presenterar en tabell över vilka medlemmar som betalat, fakturabelopp, betalat belopp samt betalningssaldo efter inbetalning
+7. Kassören konstaterar att inga avvikelser finns och avslutar funktionen
+
+#### Alternativ
+**2a. Systemet får ingen kontakt med banken**  
+ 1. Systemet meddelar kassören att det inte får kontakt med banken
+ 
+**4a. Medlemsnummer finns inte i databasen**
+ 1. Systemet markerar betalningen som avvikande
+ 2. Åter till steg 5 i huvudscenariot
+
+**7a. Det finns avvikelser där någon medlem inte betalat eller betalat för lite**  
+ 1. Kassören markerar berörda fakturor  
+ 2. Systemet genererar lista över medlemmar, deras nya betalningssaldo, samt respektive förseningsavgift  
+ 3. Åter till användningsfallet 'Generera fakturor'  
+  
+**7b. Det finns avvikelser där någon medlem betalat för mycket**  
+ 1. Kassören markerar berörda fakturor  
+ 2. Systemet visar berörd faktura med medlemsuppgifter  
+ 3. Kassören initierar utskrift av notifikation till berörd medlem  
+ 4. Systemet skriver ut notifikation  
+ 5. Kassören initierar återbetalning  
+ 6. Systemet kontaktar banken med uppgifterna  
 
 ## Förkrav
-### Uppkopplingar per testfall
-| Testfall nr. | Uppkopplad mot testdatabas | Testversion av BankAPI | 
-|:------------:|:--------------------------:|:----------------------:|
-|2.1           |Ja                          |Uppkopplat              |
-|2.2           |Ja                          |Uppkopplat              |
-|2.3           |Ja                          |Nedkopplat              |
-|2.2           |Ja                          |Uppkopplat              |
-|2.2           |Ja                          |Uppkopplat              |
-|2.2           |Ja                          |Uppkopplat              |
-|2.2           |Ja                          |Uppkopplat              |
-|2.2           |Ja                          |Uppkopplat              |
-|2.2           |Ja                          |Uppkopplat              |
-
 ### Medlemsinformation i testdatabas
-| Medlemsnummer | Medlem - namn              | Inledande betalningssaldo | 
-|:------------: |----------------------------|:-------------------------:|
-|111111         |Kalle Karlsson              |- 549,00 SEK               |
-|222222         |Anders Andersson            |+ 152,45 SEK               |
-|333333         |Sven Svensson               |0,00 SEK                   |
+| Medlemsnummer | Medlem - namn      | Inledande betalningssaldo | 
+|:------------: |--------------------|:-------------------------:|
+|111111         |Kalle Karlsson      |- 345,00 SEK               |
+|222222         |Anders Andersson    |- 549,00 SEK               |
+|333333         |Sven Svensson       |- 152,45 SEK               |
 
 ### Övrig information om testdatabas
 * Förseningsavgiften är 50 SEK + 8% av utestående betalning  
@@ -31,7 +49,38 @@
 |testa123    |admin987    |
 
 ## Testfall
-### TF 1.1 Huvudscenario: funktion avstämning inbetalningar
+### Grundläggande testfall
+|Testfall|Input |Förväntad output|Förkrav:|Genomfört testfall|Uppkopplad mot testdatabas|Testversion av BankAPI|
+|--------|------|----------------|--------|:----------------:|:------------------------:|:--------------------:|
+|a       |111111|Kalle Karlsson  |        |-                 |Ja                        |N/A                   |
+|b       |123456|Medlem finns ej |        |-                 |Ja                        |N/A                   |
+
+#### TF a. Söka medlem - medlem finns
+1. Indata: medlemsnummer 111111
+2. Systemet söker efter numret i databasen
+3. Medlem Kalle Karlsson hittas
+
+#### TF b. Söka medlem - medlem finns inte
+1. Indata: medlemsnummer 123456
+2. Systemet söker efter numret i databasen
+3. Ingen medlem hittas
+
+
+### Testfall knutna till användningfallsscenariot
+|Testfall|Input              |Förväntad output      |Förkrav:|Genomfört testfall     |Uppkopplad mot testdatabas|Testversion av BankAPI|
+|--------|-------------------|----------------------|--------|:---------------------:|:------------------------:|:--------------------:|
+|1.1     |Initiering funktion|Funktion startar      |        |-                      |Ja                        |N/A                   |
+|2.1     |testa123, admin987 |Inloggning ok         |        |-                      |Ja                        |Uppkopplad            |
+|2.2     |321atset, 789nimda |Inloggning misslyckas |        |-                      |Ja                        |Uppkopplad            |
+|2.3     |                   |Bank ej tillgänglig   |        |-                      |Ja                        |Nedkopplad            |
+|4.1     |345,00             |0,00                  |        |a. (medlem 111111)     |Ja                        |Uppkopplad            |
+|4.2     |345,00             |-204,00               |        |a. (medlem 222222)     |Ja                        |Uppkopplad            |
+|4.3     |345,00             |192,55                |        |a. (medlem 333333)     |Ja                        |Uppkopplad            |
+|4.4     |belopp i SEK       |avvikande inbetalning |        |b. (medlem finns ej)   |Ja                        |Uppkopplad            |
+|6.1     |Initiering funktion|Lista över betalningar|        |4.1 / 4.2 / 4.3 / 4.4  |Ja                        |N/A                   |
+|7.1     |-204,00            |270,32                |        |4.2                    |Ja                        |N/A                   |
+
+#### TF 1.1 Huvudscenario: funktion avstämning inbetalningar
 1. Kassören väljer att stämma av inbetalningar
 2. Systemfunktionen för avstämning initieras
 
@@ -53,61 +102,42 @@
 2. Banken svarar inte på kontaktförsöket
 3. Systemet meddelar användaren om det misslyckade kontaktförsöket
 
-### TF 4.1 Huvudscenario: matcha betalning med medlem
-1. Systemet tar inbetalningens meddelandeinformation (som består av medlemsnumret)
-2. Systemet söker efter numret i databasen
-3. Numret hittas
-4. Inbetalningen knyts till medlemmen
+#### TF 4.1 Huvudscenario: jämför betalningssaldo - korrekt inbetalning
+1. Testfall söka medlem genomfört (medlem 111111)
+2. Indata från bank: betalat belopp 345,00 SEK
+3. Systemet hämtar betalningssaldo för medlem 111111: -345,00 SEK
+4. Systemet beräknar nytt betalningssaldo (-345,00 + 345,00 = 0,00) 
+5. Systemet sparar nytt betalningssaldo
 
-### TF 4.2 Huvudscenario: matcha betalning med medlem - felaktigt medlemsnummer
-1. Systemet tar inbetalningens meddelandeinformation (som består av medlemsnumret)
-2. Systemet söker efter numret i databasen
-3. Numret hittas inte
-4. Inbetalningen markeras som oknuten
+#### TF 4.2 Huvudscenario: jämför betalningssaldo - för liten inbetalning
+1. Testfall söka medlem genomfört (medlem 222222)
+2. Indata från bank: betalat belopp 345,00 SEK
+3. Systemet hämtar betalningssaldo för medlem 222222: -549,00 SEK
+4. Systemet beräknar nytt betalningssaldo (-549,00 + 345,00 = -204,00) 
+5. Systemet sparar nytt betalningssaldo
 
-### TF 4.3 Huvudscenario: systemet presenterar en lista över inkomna betalningar
-1. Systemet kopplar indata från banken till medlem
-2. Systemet formaterar informationen till en lista
-3. Systemet visar listan
+#### TF 4.3 Huvudscenario: jämför betalningssaldo - för stor inbetalning
+1. Testfall söka medlem genomfört (medlem 333333)
+2. Indata från bank: betalat belopp 345,00 SEK
+3. Systemet hämtar betalningssaldo för medlem 333333: -152,45 SEK
+4. Systemet beräknar nytt betalningssaldo (-152,45 + 345,00 = 192,55) 
+5. Systemet sparar nytt betalningssaldo
 
-### TF 4.4 TF 4.1 Huvudscenario: systemet presenterar en lista över inkomna betalningar - felaktigt medlemsnummer
-1. Systemet kopplar indata från banken till medlem
-2. Systemet särbehandlar uppgifterna som inte kan matchas med en medlem
-3. Systemet formaterar informationen till en lista med omatchade inbetalningar överst
-4. Systemet visar listan
+### TF 4.4 Scenario 4a: jämför betalningssaldo - felaktigt medlemsnummer
+1. Testfall b är utfört
+2. Inbetalningen markeras som avvikande
 
-### TF 5.1 Huvudscenario: funktion avstämning belopp
-1. Kassören väljer att stämma av inbetalat belopp mot förväntat belopp
-2. Systemfunktionen för beloppsavstämning initieras
+### TF 6.1 Huvudscenario: systemet presenterar en tabell över inkomna betalningar
+1. Testfall 4.1, 4.2, 4.3 och/eller 4.4 är utfört
+2. Systemet sorterar information grupperad efter utfall
+3. Systemet formaterar informationen till en tabell
+4. Systemet visar tabellen
 
-### TF 5.2 Huvudscenario: beloppsavstämning - korrekta belopp
-1. Systemet söker upp medlemmens betalningssaldo via medlemsnumret
-2. Systemet beräknar om inkommen betalning matchar det fakturerade beloppet
-3. Det kvarstående beloppet är 0 kronor
-4. Systemet uppdaterar medlemmens betalningssaldo
-
-### TF 5.2 Huvudscenario: beloppsavstämning - för liten inbetalning
-1. Systemet söker upp medlemmens betalningssaldo via medlemsnumret
-2. Systemet beräknar om inkommen betalning matchar det fakturerade beloppet
-3. Det kvarstående beloppet överstiger 0 kronor
-4. Systemet uppdaterar medlemmens betalningssaldo
-
-### TF 5.2 Huvudscenario: beloppsavstämning - för stor inbetalning
-1. Systemet söker upp medlemmens betalningssaldo via medlemsnumret
-2. Systemet beräknar om inkommen betalning matchar det fakturerade beloppet
-3. Det kvarstående beloppet understiger 0 kronor
-4. Systemet uppdaterar medlemmens betalningssaldo
-
-### TF 6.1 Huvudscenario: funktion presentera beloppsavstämning
-1. Systemet sorterar resultaten från beloppsavstämningen
-2. Systemet formaterar de sorterade resultatet som en lista 
-
-### TF 7.1 Scenario 7a: lägg på förseningsavgift
-1. Systemet letar upp medlemmens betalningssaldo
-2. Systemet beräknar förseningsavgift
-3. Systemet presenterar betalningssaldot samt beräknad förseningsavgift
-4. Systemet mottar godkännande från kassör
-5. Systemet uppdaterar betalningssaldo
+### TF 7.1 Scenario 7a: lägga på förseningsavgift
+1. Testfall 4.2 är genomfört
+2. Systemet letar upp medlemmens betalningssaldo (: -204,00 SEK)
+3. Systemet beräknar förseningsavgift (204,00 * 0,08 = 16,32 + 50 = 66,32 SEK)
+4. Systemet uppdaterar betalningssaldo (204,00 + 66,32 = 270,32) 
 
 ### TF 7.2 Scenario 7b: presentera medlemsfaktura
 1. Kassör väljer vilken medlemsfaktura hen vill se
