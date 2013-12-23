@@ -32,7 +32,7 @@ Uppdatera båtinnehav
 Generera faktura  
 Stämma av inbetalningar  
 Fördela båtplatser  
-Boka utrustning 
+Boka utrustning  
 Hantera utbetalning  
 
 ## Användningsfall - kort format
