@@ -26,10 +26,7 @@
 **7b. Det finns avvikelser där någon medlem betalat för mycket**  
  1. Kassören markerar berörda fakturor  
  2. Systemet visar berörd faktura med medlemsuppgifter  
- 3. Kassören initierar utskrift av notifikation till berörd medlem  
- 4. Systemet skriver ut notifikation  
- 5. Kassören initierar återbetalning  
- 6. Systemet kontaktar banken med uppgifterna  
+ 3. Till användningsfallet 'Hantera utbetalning' 
 
 ## Förkrav
 Samtliga användningsfall kräver att användaren är uppkopplad mot testdatabasen  
@@ -96,7 +93,6 @@ Samtliga användningsfall kräver att användaren är uppkopplad mot testdatabas
 |4.4     |belopp i SEK       |Avvikande inbetalning |b. (medlem finns ej)       |Uppkopplad                  |
 |6.1     |Initiering funktion|Lista över betalningar|4.1 / 4.2 / 4.3 / 4.4      |Uppkoppling behövs ej       |
 |7.1     |-204,00            |270,32                |4.2                        |Uppkoppling behövs ej       |
-|7.2     |Initiering funktion|Funktion avslutad     |4.3 och 2.1                |Uppkopplad                  |
 
 #### TF 1.1 Huvudscenario: funktion avstämning inbetalningar
 1. Kassören väljer att stämma av inbetalningar
@@ -156,8 +152,3 @@ Samtliga användningsfall kräver att användaren är uppkopplad mot testdatabas
 2. Systemet letar upp medlemmens betalningssaldo (: -204,00 SEK)
 3. Systemet beräknar förseningsavgift (204,00 * 0,08 = 16,32 + 50 = 66,32 SEK)
 4. Systemet uppdaterar betalningssaldo (204,00 + 66,32 = 270,32) 
-
-### TF 7.2 Scenario 7b: återbetalning
-1. Testfall 4.3 är genomfört
-2. Testfall 2.1 är genomfört
-3. Systemet kontaktar banken (se separat testfall) med uppgifterna

@@ -32,9 +32,8 @@ Uppdatera båtinnehav
 Generera faktura  
 Stämma av inbetalningar  
 Fördela båtplatser  
-Boka utrustning  
-
-[Diagram finns här](https://c9.io/aj222ah/uppgift234/workspace/Use case lab 3.pdf)
+Boka utrustning 
+Hantera utbetalning  
 
 ## Användningsfall - kort format
 ### Uppdatera medlemsuppgifter
@@ -51,6 +50,9 @@ Sekreteraren är inloggad i systemet som administratör och väljer att se förr
 
 ### Boka utrustning
 Medlemmen är inloggad i systemet och systemet presenterar en lista över utrustning. Medlemmen väljer tidpunkt som han vill boka utrustning för och systemet visar utrustning som är bokningsbar vid det angivna tillfället. Medlemmen väljer utrustning och sparar sin bokning. Systemet bekräftar bokningen.
+
+### Hantera utbetalning
+Kassören initierar utbetalningsfunktionen. Systemet presenterar aktuella utbetalningar. Kassören godkänner utbetalningar. Systemet kontaktar banken och överför uppgifterna. Banken bekräftar uppgifterna. Systemet visar bekräftelse för kassör.
 
 ## Användningsfall - fully dressed
 ### Stämma av inbetalningar
